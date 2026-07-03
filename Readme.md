@@ -18,15 +18,15 @@
 
 # 📖 Project Overview
 
-This project demonstrates how to deploy a **production-ready WordPress website** on **Amazon EC2** with **Amazon RDS (MySQL)** as the backend database.
+This project demonstrates the deployment of a **production-ready WordPress website** on **Amazon EC2** using **Amazon RDS (MySQL)** as the backend database.
 
-The web server is hosted on an EC2 instance running **Apache** and **PHP**, while the database is securely managed using **Amazon RDS**. This architecture separates the application and database layers, improving scalability, security, and maintainability.
+The web server runs on Amazon Linux 2023 with Apache and PHP, while Amazon RDS securely stores the WordPress database. This architecture follows AWS best practices by separating the application and database layers, resulting in improved security, scalability, and reliability.
 
 ---
 
 # 🏗️ Architecture
 
-```
+```text
                       Internet
                           │
                     Public IP Address
@@ -56,7 +56,7 @@ The web server is hosted on an EC2 instance running **Apache** and **PHP**, whil
 - Security Groups
 - Internet Gateway
 - Amazon Linux 2023
-- Apache HTTP Server (httpd)
+- Apache HTTP Server
 - PHP
 - MariaDB Client
 - WordPress
@@ -65,14 +65,14 @@ The web server is hosted on an EC2 instance running **Apache** and **PHP**, whil
 
 # 🚀 Features
 
-- WordPress Hosted on Amazon EC2
-- Amazon RDS as Backend Database
-- Apache Web Server
-- PHP Integration
-- Secure Database Connectivity
-- Production-Style Cloud Architecture
-- Scalable Deployment
-- Linux Administration
+- Production-Ready WordPress Deployment
+- Amazon EC2 Web Server
+- Amazon RDS MySQL Database
+- Apache & PHP Configuration
+- Secure EC2-RDS Connectivity
+- WordPress CMS Installation
+- Linux Server Administration
+- Cloud Infrastructure Deployment
 
 ---
 
@@ -116,7 +116,7 @@ sudo cp -r wordpress/* /var/www/html/
 
 ---
 
-## Step 5 – Create Amazon RDS
+## Step 5 – Create Amazon RDS Database
 
 - Engine : MySQL
 - Username : admin
@@ -152,14 +152,12 @@ SHOW DATABASES;
 
 ## Step 9 – Configure WordPress
 
-Edit the configuration file:
-
 ```bash
-sudo cp wp-config-sample.php wp-config.php
-sudo vi wp-config.php
+cp wp-config-sample.php wp-config.php
+vi wp-config.php
 ```
 
-Update the following database details:
+Update:
 
 ```php
 DB_NAME     = wordpress
@@ -172,7 +170,7 @@ DB_HOST     = RDS-ENDPOINT
 
 ## Step 10 – Complete WordPress Installation
 
-Open your browser and visit:
+Visit:
 
 ```
 http://<EC2-Public-IP>
@@ -182,51 +180,49 @@ Complete the WordPress setup wizard.
 
 ---
 
+# 📸 Project Screenshots
+
 ## 💻 MariaDB Client Installation
 
-<img src="./images/mariadb-client-installation.png" width="900">
+<img src="mariadb-client-installation.png" width="900">
 
 ---
 
 ## 🔗 EC2 Connected to Amazon RDS
 
-<img src="./images/ec2-rds-database-connection.png" width="900">
+<img src="ec2-rds-database-connection.png" width="900">
 
 ---
 
 ## 🗄️ Amazon RDS MySQL Creation
 
-<img src="./images/amazon-rds-mysql-creation.png" width="900">
+<img src="amazon-rds-mysql-creation.png" width="900">
 
 ---
 
 ## ⚙️ WordPress Admin Dashboard
 
-<img src="./images/wordpress-admin-dashboard.png" width="900">
+<img src="wordpress-admin-dashboard.png" width="900">
 
 ---
 
 ## 🌐 WordPress Home Page
 
-<img src="./images/wordpress-homepage.png" width="900">
+<img src="wordpress-homepage.png" width="900">
+
 ---
 
 # 📁 Project Structure
 
-```
+```text
 AWS-End-to-End-WordPress-RDS-Deployment/
 │
 ├── README.md
-│
-├── images/
-│   ├── ec2-instance.png
-│   ├── rds-instance.png
-│   ├── mysql-connection.png
-│   ├── database-created.png
-│   ├── wordpress-installation.png
-│   └── wordpress-home.png
-│
-└── commands.md
+├── amazon-rds-mysql-creation.png
+├── ec2-rds-database-connection.png
+├── mariadb-client-installation.png
+├── wordpress-admin-dashboard.png
+└── wordpress-homepage.png
 ```
 
 ---
@@ -249,13 +245,13 @@ AWS-End-to-End-WordPress-RDS-Deployment/
 
 # 📚 Learning Outcomes
 
-- Launched and configured Amazon EC2.
+- Launched and configured an Amazon EC2 instance.
 - Installed Apache, PHP, and WordPress.
-- Created and configured Amazon RDS (MySQL).
-- Connected EC2 to RDS using MariaDB Client.
+- Created and configured an Amazon RDS MySQL database.
+- Connected Amazon EC2 with Amazon RDS using the MariaDB client.
 - Configured WordPress with an external database.
-- Deployed a production-style cloud application.
-- Gained hands-on experience with AWS compute, storage, networking, and database services.
+- Deployed a production-ready WordPress application on AWS.
+- Strengthened practical skills in cloud infrastructure, Linux administration, and database connectivity.
 
 ---
 
@@ -265,5 +261,15 @@ AWS-End-to-End-WordPress-RDS-Deployment/
 
 **Aspiring AWS Cloud & DevOps Engineer**
 
-- GitHub: https://github.com/KISHORE-2605
-- LinkedIn: https://www.linkedin.com/in/kishore-g005
+- **GitHub:** https://github.com/KISHORE-2605
+- **LinkedIn:** https://www.linkedin.com/in/kishore-g005
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project helpful, please consider giving it a Star!
+
+**Thank you for visiting my repository! 🚀**
+
+</div>
